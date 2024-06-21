@@ -8,9 +8,9 @@ export default function Header() {
     <div className="text-white bg-black p-3 w-full">
       <div className="flex items-center gap-4 w-full ">
         <div className="flex flex-row-reverse items-center lg:flex-row gap-4  ">
-          <h1 className="font-extrabold text-2xl text-black bg-[#f5c518] px-2 py-1 rounded-md ">
+          <Link href="/" className="font-extrabold text-2xl text-black bg-primary px-2 py-1 rounded-md ">
             IMDb
-          </h1>
+          </Link>
           <MenuItems />
         </div>
         <SearchBar></SearchBar>
@@ -24,7 +24,7 @@ export default function Header() {
         <Link href="/" className="font-semibold min-w-fit ">
           Sign in
               </Link>
-              <Link href="/" className="lg:hidden font-semibold min-w-fit text-black bg-[#f5c518] px-2 py-1 rounded-md ">Use app</Link>
+              <Link href="/" className="lg:hidden font-semibold min-w-fit text-black bg-primary px-2 py-1 rounded-md ">Use app</Link>
       </div>
     </div>
   );
