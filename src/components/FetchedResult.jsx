@@ -1,11 +1,10 @@
+import Card from "./Card";
+
 export default function FetchedResult({results}) {
   return (
-    <div>
-      <h1>{results?.length}</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 place-items-center gap-5 px-2 my-8 ">
       {results?.map((result) => (
-        <div key={result.id}>
-          <h1>{result.original_title}</h1>
-        </div>
+        <Card key={result.id} result={result} />
       ))}
     </div>
   );

@@ -14,7 +14,7 @@ export default function HomeNavbar({param, title}){
         href={`/?genre=${param}`}
         className={`${
           genre === param ? "underline underline-offset-4 text-gray-100 " : ""
-        } hover:text-gray-100 font-semibold duration-500 `}
+        }  hover:text-gray-100 font-semibold duration-500 `}
       >
         {title}
       </Link>
