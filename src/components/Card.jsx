@@ -12,7 +12,7 @@ export default function Card({result}) {
     overview,
     release_date,
     first_air_date,
-    vote_count
+    vote_count, poster_path,
   } = result || {};
   console.log(result);
 
