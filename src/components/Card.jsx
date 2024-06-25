@@ -14,7 +14,6 @@ export default function Card({result}) {
     first_air_date,
     vote_count, poster_path,
   } = result || {};
-  console.log(result);
 
   return (
     <div className="rounded-md bg-gray-600 w-full hover:shadow-md hover:shadow-gray-200 duration-500 ">

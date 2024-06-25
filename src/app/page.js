@@ -21,7 +21,7 @@ export default async function Home({ searchParams }) {
 
   return (
     <div>
-      <div className="flex items-center justify-start gap-4 my-6">
+      <div className="flex items-center justify-start gap-4 mt-6 px-2 ">
         <HomeNavbar param={"fetchTrending"} title="Trending" />
         <HomeNavbar param={"fetchTopRated"} title="Top Rated" />
       </div>
