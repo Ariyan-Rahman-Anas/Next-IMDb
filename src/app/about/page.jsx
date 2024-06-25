@@ -3,19 +3,19 @@ export default function About() {
     <div className="w-full md:w-[85vw] mx-auto pt-10 pb-5 px-2 text-sm">
       <h1 className="text-3xl  ">About IMDb-Clone</h1>
       <p className="tracking-wider">
-        Welcome to our IMDb-Clone, your ultimate source for all things movies,
+        {`Welcome to our IMDb-Clone, your ultimate source for all things movies,
         TV shows, and entertainment. Our platform is designed to be the go-to
         destination for movie enthusiasts, TV show aficionados, and industry
         professionals alike. Whether you're here to discover new movies, read
-        reviews, or track your favorite stars, we've got you covered.
+        reviews, or track your favorite stars, we've got you covered.`}
       </p>
       <h1 className="text-3xl mt-10 ">What is IMDb?</h1>
       <p className="tracking-wider">
-        The Internet Movie Database (IMDb) is the world's most popular and
+        {`The Internet Movie Database (IMDb) is the world's most popular and
         authoritative source for movie, TV, and celebrity content. Founded in
         1990 by Col Needham, IMDb started as a simple database of movie
         information and has grown into a comprehensive resource that features
-        information on millions of movies, TV shows, and entertainment programs.
+        information on millions of movies, TV shows, and entertainment programs.`}
       </p>
       <h1 className="text-3xl mt-10 ">Our Mission</h1>
       <p className="tracking-wider text-base ">
@@ -39,9 +39,10 @@ export default function About() {
           guide your viewing choices.
         </li>
         <li>
-          <strong>Track Your Favorites:</strong> Create lists of your favorite
+          <strong>Track Your Favorites:</strong>
+          {`Create lists of your favorite
           movies and TV shows, keep track of what you've watched, and set
-          reminders for new releases.
+          reminders for new releases.`}
         </li>
         <li>
           <strong>Access Multimedia Content: </strong> Watch trailers, view
@@ -66,13 +67,15 @@ export default function About() {
           viewing.
         </li>
         <li>
-          <strong>Trending and Popular Content:</strong> Discover what's
-          currently trending and popular in the world of entertainment.
+          <strong>Trending and Popular Content:</strong>{" "}
+          {`Discover what's
+          currently trending and popular in the world of entertainment.`}
         </li>
         <li>
-          <strong>Advanced Search and Filters: </strong> Find exactly what
+          <strong>Advanced Search and Filters: </strong>{" "}
+          {`Find exactly what
           you're looking for with advanced search options and filters based on
-          genre, release year, rating, and more.
+          genre, release year, rating, and more.`}
         </li>
         <li>
           <strong>News and Updates: </strong> Stay up-to-date with the latest
@@ -106,11 +109,11 @@ export default function About() {
       </ul>
       <h1 className="text-3xl mt-10 ">Get Started</h1>
       <p className="tracking-wider">
-        Dive into the world of movies and TV shows with our IMDb-Clone. Whether
+        {`Dive into the world of movies and TV shows with our IMDb-Clone. Whether
         you're looking for information on a specific film, discovering new
         content to watch, or wanting to share your opinions, our platform offers
         everything you need. Start exploring today and become a part of our
-        growing community of entertainment enthusiasts.
+        growing community of entertainment enthusiasts.`}
       </p>
       <p className="tracking-wider mt-8 text-lg  font-semibold">
         Thank you for choosing our IMDb-Clone. We hope you enjoy your
