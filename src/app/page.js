@@ -1,5 +1,6 @@
 import FetchedResult from "@/components/FetchedResult";
 import HomeNavbar from "../components/HomeNavbar";
+import SearchBox from "@/components/SearchBox";
 const API_KEY = process.env.API_KEY;
 
 export default async function Home({ searchParams }) {
@@ -21,6 +22,7 @@ export default async function Home({ searchParams }) {
 
   return (
     <div>
+      <SearchBox />
       <div className="flex items-center justify-start gap-4 mt-6 px-2 ">
         <HomeNavbar param={"fetchTrending"} title="Trending" />
         <HomeNavbar param={"fetchTopRated"} title="Top Rated" />

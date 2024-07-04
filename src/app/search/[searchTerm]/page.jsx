@@ -14,9 +14,11 @@ export default async function searchPage({ params }) {
         {results ? (
           <FetchedResult results={results} />
         ) : (
-          <div>
-            <h1>Oops!</h1>
+          <div className="flex items-center justify-center ">
+            <div>
+              <h1>Oops!</h1>
             <h1>No results found!</h1>
+            </div>
           </div>
         )}
       </div>

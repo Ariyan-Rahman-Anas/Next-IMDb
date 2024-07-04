@@ -4,11 +4,16 @@ import SearchBar from "./SearchBar";
 import Link from "next/link";
 
 export default function Header() {
+
+
   return (
     <div className="text-white bg-black p-3 w-full">
       <div className="flex items-center gap-4 w-full ">
         <div className="flex flex-row-reverse items-center lg:flex-row gap-4  ">
-          <Link href="/" className="font-extrabold text-2xl text-black bg-primary px-2 py-1 rounded-md ">
+          <Link
+            href="/"
+            className="font-extrabold text-2xl text-black bg-primary px-2 py-1 rounded-md "
+          >
             IMDb
           </Link>
           <MenuItems />
@@ -21,10 +26,17 @@ export default function Header() {
           <BsFillBookmarkPlusFill />
           <span>Watchlist</span>
         </button>
-        <Link href="/" className="font-semibold min-w-fit ">
+
+        <Link href="/log-in" className="font-semibold min-w-fit ">
           Sign in
-              </Link>
-              <Link href="/" className="lg:hidden font-semibold min-w-fit text-black bg-primary px-2 py-1 rounded-md ">Use app</Link>
+        </Link>
+        
+        <Link
+          href="/"
+          className="lg:hidden font-semibold min-w-fit text-black bg-primary px-2 py-1 rounded-md "
+        >
+          Use app
+        </Link>
       </div>
     </div>
   );
