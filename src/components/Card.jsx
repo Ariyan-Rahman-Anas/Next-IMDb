@@ -20,7 +20,7 @@ export default function Card({result}) {
 
   const handlePostAMovie=async()=>{
 try{
-const res= await fetch(`http://localhost:9001/watch-list`, {
+const res= await fetch(`https://next-imdb-back-end.vercel.app/watch-list`, {
       method: "POST",
       body: JSON.stringify(result),
       headers:{"content-Type": "application/json"}

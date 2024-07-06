@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default async function WatchList() {
 
-  const res = await fetch("http://localhost:9001/watch-list")
+  const res = await fetch("https://next-imdb-back-end.vercel.app/watch-list")
   const movies = await res.json()
 
   return (
