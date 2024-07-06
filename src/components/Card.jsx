@@ -1,11 +1,14 @@
+"use client"
+
 import { FaRegThumbsUp } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-export default function Card({result}) {
 
+
+export default function Card({result}) {
   const {
     id,
-    backdrop_path,
+    backdrop_path, 
     title,
     original_title,
     name,
@@ -15,9 +18,25 @@ export default function Card({result}) {
     vote_count, poster_path,
   } = result || {};
 
+  const handlePostAMovie=async()=>{
+try{
+const res= await fetch(`http://localhost:9001/watch-list`, {
+      method: "POST",
+      body: JSON.stringify(result),
+      headers:{"content-Type": "application/json"}
+    } )
+    const data = await res.json()
+    console.log(data)
+}catch(error){
+      console.log("error is :", error);
+}
+  }
+
+
+
   return (
     <div className="rounded-md bg-gray-600 w-full hover:shadow-md hover:shadow-gray-200 duration-500 ">
-      <Link href={`/movie/${id}`}>
+      <Link onClick={handlePostAMovie} href={`/movie/${id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${
             backdrop_path || poster_path

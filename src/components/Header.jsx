@@ -22,10 +22,10 @@ export default function Header() {
         <button className="hidden lg:inline font-extrabold text-2xl px-3 py-1 hover:bg-gray-800 duration-500 rounded-md ">
           IMDb<span className="text-[#16b3d6] ">Pro</span>
         </button>
-        <button className="hidden lg:flex items-center gap-1 px-3 py-2 font-semibold hover:bg-gray-800 duration-500 rounded-md ">
+        <Link href="/watch-list" className="hidden lg:flex items-center gap-1 px-3 py-2 font-semibold hover:bg-gray-800 duration-500 rounded-md ">
           <BsFillBookmarkPlusFill />
           <span>Watchlist</span>
-        </button>
+        </Link>
 
         <Link href="/log-in" className="font-semibold min-w-fit ">
           Sign in

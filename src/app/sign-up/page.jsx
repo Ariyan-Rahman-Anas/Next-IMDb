@@ -4,18 +4,31 @@ import Link from "next/link";
 import { useRef } from "react";
 
 export default function SignUp() {
-  const handleSubmitForm =  (e) => {
+  const handleSubmitForm = async (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
 
-    const aNewUser={email, password}
-      console.log(aNewUser)
-      form.reset()
-    };
-    
-    const formRef = useRef(null)
+    try {
+      const aNewUser = { email, password };
+      console.log(aNewUser);
+      const res = await fetch(`http://localhost:9001/signup`, {
+        method: "POST",
+        body: JSON.stringify(aNewUser),
+        headers: { "content-Type": "application/json" },
+      });
+      const data = await res.json();
+      console.log(data);
+      if(data?.user){
+      form.reset();
+      }
+    } catch (error) {
+      console.log("error is :", error);
+    }
+  };
+
+  const formRef = useRef(null);
 
   return (
     <div className="flex flex-col items-center justify-center gap-3 min-h-[80vh] px-2 ">
