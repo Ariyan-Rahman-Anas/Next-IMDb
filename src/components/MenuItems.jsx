@@ -33,7 +33,7 @@ export default function MenuItems() {
                 <li onClick={hidingMenu} className="hover:underline ">
                   <Link href="/about">About</Link>
                 </li>
-                <li onClick={hidingMenu} className="md:hidden hover:underline ">
+                <li onClick={hidingMenu} className="lg:hidden hover:underline ">
                   <Link href="/watch-list">Watch List</Link>
                 </li>
               </ul>
