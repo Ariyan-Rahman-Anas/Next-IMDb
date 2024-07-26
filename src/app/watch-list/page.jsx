@@ -1,10 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useState } from 'react';
+import apiUtils from "@/utils/apiUtils";
 
-export default async function WatchList() {
+export default function WatchList() {
 
-  const res = await fetch("https://next-imdb-back-end.vercel.app/watch-list")
-  const movies = await res.json()
+  const [movies, setMovies] = useState(null)
+  useEffect(()=>{
+    const fetchData= async()=>{
+      const result = await apiUtils.get("watch-list")
+      setMovies(result)
+    }
+    fetchData()
+  },[])
+
 
   return (
     <div  className="px-2 my-6">

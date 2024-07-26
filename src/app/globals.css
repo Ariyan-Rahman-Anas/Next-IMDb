@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+.err-msg{
+    @apply text-danger text-sm font-semibold text-left 
+}
+
 html {
   scroll-behavior: smooth;
 }

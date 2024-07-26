@@ -3,6 +3,7 @@
 import { FaRegThumbsUp } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import apiUtils from "@/utils/apiUtils";
 
 
 export default function Card({result}) {
@@ -19,20 +20,14 @@ export default function Card({result}) {
   } = result || {};
 
   const handlePostAMovie=async()=>{
-try{
-const res= await fetch(`https://next-imdb-back-end.vercel.app/watch-list`, {
-      method: "POST",
-      body: JSON.stringify(result),
-      headers:{"content-Type": "application/json"}
-    } )
-    const data = await res.json()
-    console.log(data)
-}catch(error){
-      console.log("error is :", error);
-}
+
+    try{
+      const res = await apiUtils.post("watch-list", result)
+      console.log("res is :", res);
+    }catch(err){
+      console.log("error is :", err);
+    }
   }
-
-
 
   return (
     <div className="rounded-md bg-gray-600 w-full hover:shadow-md hover:shadow-gray-200 duration-500 ">
